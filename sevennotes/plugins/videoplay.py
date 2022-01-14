@@ -76,7 +76,8 @@ async def aplay_command(client, message):
 				button_list.append(button)
 			keyboard = InlineKeyboard(row_width=3)
 			data = [
-					
+					(
+
 
 			keyboard.add(*data)
 			await msg.edit(f"{txt}",
