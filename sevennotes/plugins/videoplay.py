@@ -77,7 +77,8 @@ async def aplay_command(client, message):
 			keyboard = InlineKeyboard(row_width=3)
 			data = [
 					(
-						
+						InlineKeyboardButton(text=str(i[0]), callback_data=str(i[1])
+
 
 
 			keyboard.add(*data)
