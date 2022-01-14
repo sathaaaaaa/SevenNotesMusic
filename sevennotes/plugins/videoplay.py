@@ -37,7 +37,7 @@ async def gen_cover(thumb):
 	draw.text((205, 400), f"Now playing...", (79, 186, 224), font=font)
 	img.save("thumbnail.png")
 	os.remove("thumb.jpg")
-  return
+	
 
 
 @admin_check
