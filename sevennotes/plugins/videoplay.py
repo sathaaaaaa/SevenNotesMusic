@@ -40,7 +40,7 @@ async def gen_cover(thumb):
 	
 
 
-@admin_check
+
 @Client.on_message(filters.command("vplay") & filters.group & ~filters.private & ~filters.edited)
 async def aplay_command(client, message):
 	msg = await message.reply_text(f"Processing!...")
