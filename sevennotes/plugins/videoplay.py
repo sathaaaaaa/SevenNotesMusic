@@ -68,7 +68,7 @@ async def aplay_command(client, message):
 				txt += f"\n __Duration: {dur}__"
 				txt += f"\n __Views: {views}__"
 				emoji = emojilist[j]
-                                button = [f"{emoji}", f"vsong {x} {j}"]
+				button = [f"{emoji}", f"vsong {x} {j}"]
 				j = j + 1
 				button_list.append(button)
 			keyboard = InlineKeyboard(row_width=3)
