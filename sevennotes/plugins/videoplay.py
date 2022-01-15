@@ -68,7 +68,7 @@ async def aplay_command(client, message):
 				txt += f"\n __Duration: {dur}__"
 				txt += f"\n __Views: {views}__"
 				emoji = emojilist[j]
-				button = [f"{emoji}", f"vsong {x} {j}"]
+				button = [f"{emoji}", f"vsong {vid} {j}"]
 				j = j + 1
 				button_list.append(button)
 			keyboard = InlineKeyboard(row_width=3)
@@ -91,7 +91,7 @@ async def song_callbacc(client, CallbackQuery):
 	chet_id = CallbackQuery.message.chat.id
 	dats = CallbackQuery.data.split(None, 2)
 	link = dats[1]
-	select = VideosSearch(vid, limit = 5)
+	select = VideosSearch(link, limit = 5)
 	selection = select.result()["result"]
 	vid = int(dats[2])
 	videos = selection[vid]
