@@ -98,7 +98,7 @@ async def song_callbacc(client, CallbackQuery):
 	pic = videos["thumbnails"][0]
 	pict = pic["url"]
 	thum = pict.split("?")
-	 = thum[0]
+	thumb = thum[0]
 	await CallbackQuery.message.delete()
 	
 	try:
