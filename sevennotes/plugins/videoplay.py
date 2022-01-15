@@ -63,10 +63,7 @@ async def aplay_command(client, message):
 				dur = videos["duration"]
 				views = videos["viewCount"]["short"]
 				x = videos["link"]
-				pic = videos["thumbnails"][0]
-				pict = pic["url"]
-				thum = pict.split("?")
-				y = thum[0]
+				
 				txt += f"\n\n Title: {vtitle}"
 				txt += f"\n __Duration: {dur}__"
 				txt += f"\n __Views: {views}__"
@@ -96,7 +93,12 @@ async def song_callbacc(client, CallbackQuery):
 	link = dats[1]
 	select = VideosSearch(vid, limit = 5)
 	selection = select.result()["result"]
-	vid = dats[2]
+	vid = int(dats[2])
+	videos = selection[vid]
+	pic = videos["thumbnails"][0]
+	pict = pic["url"]
+	thum = pict.split("?")
+	 = thum[0]
 	await CallbackQuery.message.delete()
 	
 	try:
