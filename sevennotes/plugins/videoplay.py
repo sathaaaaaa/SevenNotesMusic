@@ -62,7 +62,7 @@ async def aplay_command(client, message):
 				vtitle = videos["title"]
 				dur = videos["duration"]
 				views = videos["viewCount"]["short"]
-				x = videos["link"]
+				
 				
 				txt += f"\n\n Title: {vtitle}"
 				txt += f"\n __Duration: {dur}__"
@@ -96,13 +96,14 @@ async def song_callbacc(client, CallbackQuery):
 	vid = int(dats[2])
 	videos = selection[vid]
 	pic = videos["thumbnails"][0]
+	= videos["link"]
 	pict = pic["url"]
 	thum = pict.split("?")
 	thumb = thum[0]
 	await CallbackQuery.message.delete()
 	
 	try:
-		meta = ydl.download(link)
+		meta = ydl.download(vlink)
 		m = await client.send_message(chet_id, text=f"Downloading...")
 	except Exception as e:
 		await client.send_message(chet_id, text=f"Yotube download error : {e}")
