@@ -96,7 +96,7 @@ async def song_callbacc(client, CallbackQuery):
 	link = dats[1]
 	select = VideosSearch(vid, limit = 5)
 	selection = select.result()["result"]
-	 = dats[2]
+	vid = dats[2]
 	await CallbackQuery.message.delete()
 	
 	try:
