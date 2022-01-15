@@ -96,7 +96,7 @@ async def song_callbacc(client, CallbackQuery):
 	vid = int(dats[2])
 	videos = selection[vid]
 	pic = videos["thumbnails"][0]
-	= videos["link"]
+	vlink = videos["link"]
 	pict = pic["url"]
 	thum = pict.split("?")
 	thumb = thum[0]
