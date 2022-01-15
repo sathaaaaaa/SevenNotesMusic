@@ -45,7 +45,7 @@ async def gen_cover(thumb):
 	img.save("thumbnail.png")
 	os.remove("thumb.jpg")
 
-@Client.on_message(filters.command("vplay") & filters.group & ~filters.private & ~filters.edited)
+@Client.on_message(filters.command("aplay") & filters.group & ~filters.private & ~filters.edited)
 async def aplay_command(client, message):
 	msg = await message.reply_text(f"Processing!...")
 	if len(message.command) < 2:
